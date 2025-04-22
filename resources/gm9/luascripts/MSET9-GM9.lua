@@ -1,6 +1,6 @@
-ui.show_image('0:/mset9-gm9/welcome.png')
+ui.show_png('0:/mset9-gm9/welcome.png')
 fs.copy('0:/mset9-gm9', '9:/mset9-gm9', {overwrite = true, no_cancel = true, recursive = true})
 ui.echo('MSET9-GM9 resources loaded.')
-ui.show_image('9:/mset9-gm9/unmoddedSdSwap.png')
+ui.show_png('9:/mset9-gm9/unmoddedSdSwap.png')
 fs.sd_switch('Remove the SD card from this console and insert the SD card from the unmodded console.')
 ui.echo('That\'s all folks! (I don\'t have anything else made yet)')
