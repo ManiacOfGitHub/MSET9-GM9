@@ -96,9 +96,13 @@ for _, file in ipairs(necessaryTargetFiles) do
     end
 end
 -- Check SD card for Nintendo 3DS folder
-while not fs.exists('0:/Nintendo 3DS') do
+if not fs.exists('0:/Nintendo 3DS') do
     ui.show_png('0:/mset9-gm9/error.png')
     ui.echo("Error 01: Couldn't find the Nintendo 3DS folder.\nEject the SD card and insert it into the\nunmodded console.\nTurn it on and off again, then re-run this script.")
+    ui.show_png('0:/mset9-gm9/scriptExit.png')
+    ui.echo('The script has exited due to an error.\nPress (A) to power off the console.')
+    sys.power_off()
+    return
 end
 
 ui.show_png('0:/mset9-gm9/info.png')
